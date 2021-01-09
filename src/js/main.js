@@ -1,32 +1,36 @@
 const btnAddTodo = document.querySelector("[data-js=add-todo");
-const inputTodo = document.querySelector("[data-js=todo-content");
+const inputTodoColor = document.querySelector("[data-js=input-color");
+const inputTodoContent = document.querySelector("[data-js=todo-content");
 const containerTodos = document.querySelector("[data-js=container-todos");
 
 const todos = JSON.parse(localStorage.getItem("todo-content")) || []; 
 
 const putTodoInTheListOfTodos = () => {
-  const todo = inputTodo.value;
-  if(todo) todos.push(todo);
+  const todoContent = inputTodoContent.value;
+  const todoColor = inputTodoColor.value;
 
-  const template = todos.map(todo => `
-    <div class="todo-box">
-    <span data-js="btn-remove" class="btn-close">X</span>
-    <p>${todo}</p>
-    </div>
+  if(todoContent) todos.push({content: todoContent, color: todoColor});
+
+  const template = todos.map(({content, color}) => `
+    <ul class="todo-box ${color}">
+      <span data-js="btn-remove" class="btn-close">X</span>
+      <li>${content}</li>
+    </ul>
   `).join("");
   
   containerTodos.innerHTML = template;
   setTodoInTheStorage();
   removeTodoInTheListOfTodos();
+  resetInputOfTodo();
 };
 
 const removeTodoInTheListOfTodos = () => {
   const btnsRemoveTodo = document.querySelectorAll("[data-js=btn-remove");
 
-  btnsRemoveTodo.forEach((btn, i) => {
+  btnsRemoveTodo.forEach((btn, todo) => {
     btn.addEventListener("click", e => {
       e.target.parentNode.remove();
-      removeTodoInTheStorage(i);
+      removeTodoInTheStorage(todo);
     });
   });
 };
@@ -39,6 +43,11 @@ const removeTodoInTheStorage = todo => {
 const setTodoInTheStorage = () => {
   localStorage.setItem("todo-content", JSON.stringify(todos));
 };
+
+const resetInputOfTodo = () => {
+  inputTodoColor.selectedIndex = 0;
+  inputTodoContent.value = "";
+}
 
 btnAddTodo.addEventListener("click", () => {
   putTodoInTheListOfTodos();
