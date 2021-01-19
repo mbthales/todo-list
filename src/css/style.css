@@ -8,51 +8,41 @@
   list-style: none;
 }
 
-html,
-body{
-  height: 100%;
-}
-
 body {
-  display: grid;
-  grid: 1fr 8fr/1fr;
   background-color: #faf9f9;
+  max-width: 800px;
+  margin: 0 auto;
 
   font-size: 20px;
   color: #46484E;
+  text-align: center;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 2rem;
-}
-
-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.btn-close{
-  position: absolute;
-  right: 0px;
-  top: 0;
-  cursor: pointer;
-}
-
-.todo-container{
-  padding: 20px;
-  background: #eaeaea;
-  max-width: 400px;
-  margin: 50px auto;
+h1 {
+  font-size: 4rem;
+  padding: 30px 0;
 }
 
 .todo-box{
   position: relative;
-  max-width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  word-break: break-all;
+  padding: 30px;
+  border-radius: 2px;
+  font-size: 1.5rem;
+}
+
+.todo-box:nth-child(1){
+  margin-top: 30px;
+}
+
+.btn-close{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .default{
