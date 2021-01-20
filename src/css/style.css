@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
 
-:root{
+:root {
   --primary-color: #faf9f9;
   --secundary-color: #46484E;
   --font: Arial;
@@ -17,7 +17,7 @@
   list-style: none;
 }
 
-html{
+html {
   font-size: 20px;
 }
 
@@ -39,7 +39,7 @@ h1 {
 
 .input-todo-content,
 .input-todo-color,
-.btn-add-todo{
+.btn-add-todo {
   background-color: var(--primary-color);
   
   font-family: var(--font);
@@ -48,34 +48,34 @@ h1 {
 }
 
 .input-todo-content,
-.input-todo-color{
+.input-todo-color {
   height: 30px;
   width: 100%;
   max-width: 200px;
 }
 
-.input-todo-content{
+.input-todo-content {
   border-bottom: 1px solid var(--secundary-color);
 }
 
-.input-todo-color{
+.input-todo-color {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-.btn-add-todo{
+.btn-add-todo {
   height: 45px;
   width: 45px;
   border: 1px solid var(--secundary-color);
 }
 
-.btn-add-todo:hover{
+.btn-add-todo:hover {
   background-color: var(--secundary-color);
 
   color: var(--primary-color);
 }
 
-.todo-box{
+.todo-box {
   position: relative;
   max-width: 500px;
   margin: 20px auto;
@@ -86,7 +86,7 @@ h1 {
   font-size: 1.3rem;
 }
 
-.btn-close{
+.btn-close {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -96,34 +96,34 @@ h1 {
   cursor: pointer;
 }
 
-.default{
+.default {
   background-color: #d8d8d8;
 }
 
-.yellow{
+.yellow {
   background-color: #ffffab;
 }
 
-.blue{
+.blue {
   background-color: #a0a0ff;
 }
 
-.red{
+.red {
   background-color: #ff9d9d;
 }
 
-.green{
+.green {
   background-color: #a9ffa9;
 }
 
 @media (min-width: 768px){
-  html{
+  html {
     font-size: 19px;
   }
 }
 
 @media (min-width: 1024px){
-  html{
+  html {
     font-size: 18px;
   }
 }
