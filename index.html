@@ -7,23 +7,23 @@
   <title>To-Do List</title>
 </head>
 <body>
-    <header>
-      <h1>To-do List</h1>
-    </header>
-    <main>
-      <div class="container-input-todo">
-        <input data-js="todo-content" type="text">
-        <button data-js="add-todo" type="button">Add</button>
-        <select data-js="input-color">
-          <option value="default">Chose a color</option>
-          <option value="yellow">Yellow</option>
-          <option value="blue">Blue</option>
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-        </select>
-      </div>    
-      <div data-js="container-todos"></div>
-    </main>
+  <header>
+    <h1>To-do List</h1>
+  </header>
+  <main>
+    <form>
+      <input class="input-todo-content" data-js="input-todo-content" placeholder="Type your task" type="text">
+      <select class="input-todo-color" data-js="input-todo-color">
+        <option value="default">Chose a color</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+      </select>
+      <button class="btn-add-todo" data-js="btn-add-todo" type="button">Add</button>
+    </form>    
+    <div data-js="container-todos"></div>
+  </main>
   <script src="./src/js/main.js"></script>
 </body>
 </html>

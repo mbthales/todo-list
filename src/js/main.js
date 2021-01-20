@@ -1,6 +1,6 @@
-const btnAddTodo = document.querySelector("[data-js=add-todo");
-const inputTodoColor = document.querySelector("[data-js=input-color");
-const inputTodoContent = document.querySelector("[data-js=todo-content");
+const btnAddTodo = document.querySelector("[data-js=btn-add-todo");
+const inputTodoColor = document.querySelector("[data-js=input-todo-color");
+const inputTodoContent = document.querySelector("[data-js=input-todo-content");
 const containerTodos = document.querySelector("[data-js=container-todos");
 
 const todos = JSON.parse(localStorage.getItem("todo-content")) || []; 
