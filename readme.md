@@ -2,10 +2,10 @@
 A todo list with Local Storage. Build with JS.
 
 ## Usage
-Download or clone the repo and open the HTML file in your browser or just click in this [link](https://mbthales.github.io/todo-list/).
+Download or clone this repo and open the HTML file in your browser or just click in this [link](https://mbthales.github.io/todo-list/).
 
-## Tech
-The following tools were used in the construction of the project.
+## Tech/Tools
+The following tech/tools were used in the construction of the project.
 - JavaScript
 - HTML
 - CSS
